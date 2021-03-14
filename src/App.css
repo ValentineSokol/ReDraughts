@@ -1,39 +1,72 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+}
+.MoveHistory {
+  background: #f2eecb;
+  padding: 1%;
+  margin-top: 10%;
+  height: 10%;
+}
+.MoveLog {
+  border-bottom: 2px solid black;
+  margin-bottom: 2%;
+  height: 40%;
+}
+.Piece, .KingPiece {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.KingPiece {
+  border: 4px solid goldenrod;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.Cell, .SelectedCell {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-header {
-  min-height: 100vh;
+.SelectedCell {
+  box-shadow:  2px 2px 3px 3px green inset;
+}
+.logoBackground {
+  background: white;
+}
+.Board {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BoardRow {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.CellWrapper {
+  display: flex;
+  flex-direction: row;
+
+}
+.RowNumber {
+  margin-right: 30px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+@media only screen and (max-width: 800px) {
+  .Cell, .SelectedCell {
+    width: 32px;
+    height: 32px;
   }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
+  .Piece, .KingPiece {
+    width: 16px;
+    height: 16px;
   }
 }
